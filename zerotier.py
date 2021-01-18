@@ -112,7 +112,7 @@ class Member(object):
 
     @property
     def description(self):
-        return self_.json['description']
+        return self._json['description']
 
     @description.setter
     def description(self, value):
@@ -120,7 +120,7 @@ class Member(object):
 
     @property
     def activeBridge(self):
-        return self_.json['config']['activeBridge']
+        return self._json['config']['activeBridge']
 
     @activeBridge.setter
     def activeBridge(self, value):
