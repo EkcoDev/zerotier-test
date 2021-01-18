@@ -77,7 +77,6 @@ class Member(object):
         self._json = mjson
         self._z = z
         self.address = mjson['config']['address']
-#	print(mjson)
         self.clock = datetime.datetime.fromtimestamp(mjson['clock'] / float(1000))
         self.networkId = mjson['networkId']
         self.nodeId = mjson['nodeId']
