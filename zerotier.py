@@ -43,7 +43,7 @@ class Network(object):
         self.id = njson['id']
         self.creationTime = datetime.datetime.fromtimestamp(njson['config']['creationTime'] / float(1000))
         self.private = njson['config']['private']
-	self.members = z.list_members(self.id)
+	    self.members = z.list_members(self.id)
         self.authorizedMemberCount = njson['authorizedMemberCount']
         #self.allowPassiveBridging = njson['config']['allowPassiveBridging']
         self.ipAssignmentPools = njson['config']['ipAssignmentPools']
@@ -80,7 +80,7 @@ class Member(object):
         self.clock = datetime.datetime.fromtimestamp(mjson['clock'] / float(1000))
         self.networkId = mjson['networkId']
         self.nodeId = mjson['nodeId']
-	self.online = mjson['online']
+	    self.online = mjson['online']
         self.identity = mjson['config']['identity']
         #self.recentLog = mjson['config']['recentLog']
 
