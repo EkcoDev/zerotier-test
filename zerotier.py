@@ -148,5 +148,8 @@ class Member(object):
     @importance.setter
     def importance(self, value):
         self._json['importance'] = value
-
+    
+    @property
+    def tags(self):
+        return ','.join(self._json['config']['tags'])
 

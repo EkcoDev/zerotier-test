@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+#Path required for use within the WSL environment of my laptop
 import sys
 sys.path.append("/home/pims/.local/lib/python3.9/site-packages")
 
@@ -12,8 +13,6 @@ zeroTierKey = 'K0MgKsZFeGub9m8coz1go06siz3U6KO0'
 
 zt = ZT(zeroTierKey)
 test = zt.status
-
-#print(json.dumps(test, indent=2, sort_keys=True))
 
 print (zt.status)
 for net in zt.list_networks():
