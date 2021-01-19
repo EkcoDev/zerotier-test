@@ -106,6 +106,7 @@ class Member(object):
 
     @name.setter
     def name(self, value):
+        #this posts data directly into the API. no other function does that. this needs to change. It needs local changing and a "save"
         return self._z.request("/network/"+self.networkId+"/member/"+self.address, data={'name': value})
         #self._json['name'] = value
 
@@ -151,5 +152,10 @@ class Member(object):
     
     @property
     def tags(self):
-        return ','.join(self._json['config']['tags'])
+        return json.dumps(self._json['config']['tags'])
+    
+    @tags.setter
+    def tags(self, value):
+        self._json['config']['tags'] = value
+
 
